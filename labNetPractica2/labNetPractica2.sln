@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labNetPractica2", "labNetPractica2\labNetPractica2.csproj", "{0E763C40-878A-4DCC-BA1C-B972153B8786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labNetPractica2Tests", "labNetPractica2Tests\labNetPractica2Tests.csproj", "{7E839DD1-0D2D-46B5-B41D-5251B6571619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E763C40-878A-4DCC-BA1C-B972153B8786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E763C40-878A-4DCC-BA1C-B972153B8786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E763C40-878A-4DCC-BA1C-B972153B8786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E763C40-878A-4DCC-BA1C-B972153B8786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E839DD1-0D2D-46B5-B41D-5251B6571619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E839DD1-0D2D-46B5-B41D-5251B6571619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E839DD1-0D2D-46B5-B41D-5251B6571619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E839DD1-0D2D-46B5-B41D-5251B6571619}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B802597F-B0EF-4F96-A813-91F4C2D5D72E}
+	EndGlobalSection
+EndGlobal
