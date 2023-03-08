@@ -42,19 +42,11 @@ namespace labNetPractica2
             }
             catch (DivideByZeroException ex)
             {
-                mensaje = "Solo Chuck Norris divide por cero! usted no lo es y " + ex.Message;
-          
-            }
-
-            catch (Exception ex)
-            {
-                mensajeex = ex.Message;
-
+                mensaje = "Solo Chuck Norris divide por cero! usted no lo es y " + ex.Message;        
             }
             finally
             {
                 messajefinally = " ..Operacion finalizada";
-
             }
             return mensaje + mensajeex + messajefinally;
         }

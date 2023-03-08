@@ -48,10 +48,6 @@ namespace labNetPractica2
                     MessageBox.Show(message, "MENSAJE");
                 }   
             }
-            catch (CustomException ex)
-            {
-                MessageBox.Show(ex.Message,"INFO");
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("Seguro Ingreso una letra o no ingreso nada!" + ex.Message);
@@ -75,8 +71,7 @@ namespace labNetPractica2
             finally
             {
                 MessageBox.Show("FIN PUNTO 3");
-            }
-            
+            }   
         }
         // punto 4
         private void btnopera4_Click(object sender, EventArgs e)
@@ -88,7 +83,7 @@ namespace labNetPractica2
             }
             catch (CustomException ex)
             {
-                MessageBox.Show(ex.Message + "exception del tipo : "+ ex.GetType(), "INFO");
+                MessageBox.Show(ex.Message + " exception del tipo : "+ ex.GetType(), "INFO");
             }
             catch (Exception ex)
             {
@@ -98,9 +93,5 @@ namespace labNetPractica2
             {
             }
         }
-
-
-
-   
     }
 }

@@ -11,7 +11,6 @@ namespace labNetPractica2
         // punto 4
         public CustomException(string std) : base(String.Format("Nombre no valido {0}", std))
         {
-
         }
     }
 }

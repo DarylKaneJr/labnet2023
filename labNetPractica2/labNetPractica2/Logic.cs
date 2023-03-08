@@ -11,8 +11,7 @@ namespace labNetPractica2
     {
         // punto 3
         public static void CapturarExcepcion()
-        {
-           
+        {        
                 var list = new List<int>() { 10, 20, 30 };
                 foreach (int value in list)
                 {
@@ -27,9 +26,7 @@ namespace labNetPractica2
             if (!regex.IsMatch(std))
             {
                 throw new CustomException(std);
-            }
-                
-
+            }  
         }
     }
 }
