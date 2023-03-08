@@ -63,8 +63,20 @@ namespace labNetPractica2
         // punto 3
         private void btnopera3_Click(object sender, EventArgs e)
         {
-            // punto 3
-            MessageBox.Show(Logic.CapturarExcepcion(), "INFO");
+            try
+            {
+                Logic.CapturarExcepcion();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
+
+            }
+            finally
+            {
+                MessageBox.Show("FIN PUNTO 3");
+            }
+            
         }
         // punto 4
         private void btnopera4_Click(object sender, EventArgs e)
