@@ -11,7 +11,7 @@ namespace Lab.EF.Logic.Tests
     [TestClass()]
     public class CustomersLogicTests
     {
-        [TestMethod()]
+        [TestMethod()] /* funciona este test si la tabla Customers no fue alterada en cantidad, segun datos insertados del script*/
         public void GetAllTest()
         {
             CustomersLogic sp = new CustomersLogic();
