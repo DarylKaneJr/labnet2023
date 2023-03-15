@@ -48,9 +48,16 @@ namespace labNetPractica3
         }
         public void ListarShippers()
         {
-            ShippersLogic Osl = new ShippersLogic();
-            GrillaShippers.DataSource = null;
-            GrillaShippers.DataSource = Osl.GetAll();          
+            try
+            {
+                ShippersLogic Osl = new ShippersLogic();
+                GrillaShippers.DataSource = null;
+                GrillaShippers.DataSource = Osl.GetAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
+            }     
         }
         public void LimpiarText()
         {
@@ -60,7 +67,8 @@ namespace labNetPractica3
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-
+            try
+            {
             ShippersLogic Osl = new ShippersLogic();
             if (txtid.Text != "")
             {
@@ -72,7 +80,13 @@ namespace labNetPractica3
             else
             {             
                 MessageBox.Show(" Seleccion un Shipper en la lista, por favor", "INFO");
-            }         
+            }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
+            }
         }
 
         private void GrillaShippers_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,6 +111,7 @@ namespace labNetPractica3
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
+            try { 
             ShippersLogic Osl = new ShippersLogic();
             if (txtid.Text != "" && txtcompanyname.Text != "" && txtphone.Text != "")
             {
@@ -113,6 +128,11 @@ namespace labNetPractica3
             else
             {
                 MessageBox.Show("Seleccion un Shipper en la lista, por favor", "INFO");
+            }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
             }
         }
     }

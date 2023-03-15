@@ -15,15 +15,25 @@ namespace labNetPractica3.Consultas
     {   
         public FrmConsultasCustomers()
         {
+            try
+            {
             InitializeComponent();
             CustomersLogic cl = new CustomersLogic();
             foreach (var item in cl.GetAll())
             {
                 cmbNombres.Items.Add(item.ContactName);
             }
+
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message + " " + ex.GetType());
+            }
         }
         private void txtconsulta_Click(object sender, EventArgs e)
         {
+            try
+            {
             CustomersLogic cl = new CustomersLogic();
             foreach (var item in cl.GetAll())
             {
@@ -37,6 +47,12 @@ namespace labNetPractica3.Consultas
                 }
             }
             MessageBox.Show("Consulta realizada correctamente");
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
+            }
         }
     }
 }

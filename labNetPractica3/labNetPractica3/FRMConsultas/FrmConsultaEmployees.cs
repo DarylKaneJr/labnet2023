@@ -19,14 +19,21 @@ namespace labNetPractica3.Consultas
         }
         private void btnlistar_Click(object sender, EventArgs e)
         {
-            EmployeesLogic el = new EmployeesLogic();
-            foreach (var item in el.GetAll())
+            try
             {
-                lstnombrescustomer.Items.Add(item.FirstName + " " +item.LastName);
-                lstcustomersdireccion.Items.Add(item.Address);
+                EmployeesLogic el = new EmployeesLogic();
+                foreach (var item in el.GetAll())
+                {
+                    lstnombrescustomer.Items.Add(item.FirstName + " " + item.LastName);
+                    lstcustomersdireccion.Items.Add(item.Address);
+                }
+                btnlistar.Enabled = false;
+                MessageBox.Show("Consulta realizada correctamente");
             }
-            btnlistar.Enabled = false;
-            MessageBox.Show("Consulta realizada correctamente");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex.GetType());
+            }
         }
     }
 }
