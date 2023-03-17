@@ -53,16 +53,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrimerParte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrimerParte.Designer.cs">
+      <DependentUpon>FrmPrimerParte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSegundaParte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSegundaParte.Designer.cs">
+      <DependentUpon>FrmSegundaParte.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrimerParte.resx">
+      <DependentUpon>FrmPrimerParte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSegundaParte.resx">
+      <DependentUpon>FrmSegundaParte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +104,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab.EF.Entities\Lab.EF.Entities.csproj">
+      <Project>{BC6E58DE-306A-44D3-BD49-3D961BFCA636}</Project>
+      <Name>Lab.EF.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.EF.Logic\Lab.EF.Logic.csproj">
+      <Project>{378EB0AE-C795-4474-A216-7BC8FAF37C82}</Project>
+      <Name>Lab.EF.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

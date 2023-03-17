@@ -48,12 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogicProduct.cs" />
+    <Compile Include="BaseLogic.cs" />
+    <Compile Include="CustomerLogic.cs" />
+    <Compile Include="DTO\CategoriesDTO.cs" />
+    <Compile Include="DTO\CustomersDTO.cs" />
+    <Compile Include="DTO\OrdersDTO.cs" />
+    <Compile Include="ProductLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab.EF.Data\Lab.EF.Data.csproj">
+      <Project>{34A64EB4-F153-4A58-A7AD-F5C36E8532F0}</Project>
+      <Name>Lab.EF.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.EF.Entities\Lab.EF.Entities.csproj">
+      <Project>{BC6E58DE-306A-44D3-BD49-3D961BFCA636}</Project>
+      <Name>Lab.EF.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
