@@ -1,0 +1,15 @@
+﻿@model Lab.MVC.Models.ShippersView
+@{
+    ViewBag.Title = "Vista para Insertar y Editar";
+}
+<h1>Vista para Insertar</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(s => s.ShippersID);
+    <label> CompanyName</label>@Html.TextBoxFor(s => s.CompanyName)
+    <label> Phone</label>@Html.TextBoxFor(s => s.Phone)
+    <input type="submit" class="btn btn-sucess" value="guardar" />
+}
+
+
