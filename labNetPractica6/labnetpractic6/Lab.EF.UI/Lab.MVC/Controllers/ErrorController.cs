@@ -8,9 +8,10 @@ namespace Lab.MVC.Controllers
 {
     public class ErrorController : Controller
     {
-        // GET: Error
-        public ActionResult Index()
+        public ActionResult Index(string mensaje, int identificador)
         {
+            ViewBag.Mensaje = mensaje;
+            ViewBag.Identificador = identificador;
             return View();
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab.EF.Logic;
+using Lab.MVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,7 @@ namespace Lab.MVC.Controllers
 {
     public class HomeController : Controller
     {
+    
         public ActionResult Index()
         {
             return View();
@@ -15,14 +18,14 @@ namespace Lab.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "PRACTICA 6 MVC";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "CONTACTOS";
 
             return View();
         }

@@ -1,2 +1,8 @@
-﻿
-<p>Hubo un error</p>
+﻿@{
+    ViewBag.Title = "Shippers Insert And Update";
+}
+<h1> Mensaje de Errores</h1>
+<div>
+    @ViewBag.Mensaje
+</div>
+@Html.ActionLink("Volver", "Index", "Shippers")

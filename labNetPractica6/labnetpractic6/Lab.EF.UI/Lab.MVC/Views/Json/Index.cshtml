@@ -1,0 +1,35 @@
+﻿@model List<Lab.MVC.Models.ShippersView>
+@{
+    ViewBag.Title = "Json";
+}
+
+
+<h2>Obtener información guardada en Sql Server como formato JSON por solicitud Ajax</h2>
+<input onclick="Obten();" type="button" value="OBTENER " />
+<h3>Nombres de companias</h3>
+<hr />
+<div id="MiDiv">
+</div>
+<p>En console log de inspeccionar elemento se muestra objeto completo en JSON</p>
+<script>
+    function Obten()
+    {
+        fetch("@Url.Content("~/Json/ObtenerShippers")")
+            .then(function (res)
+            {
+                return res.json();
+            })
+            .then(function (miJson)
+            {
+                console.log(miJson)
+
+                let miresultado = "";
+                for (let i = 0; i < miJson.length; i++)
+                {
+                    miresultado += "<p> " + miJson[i].CompanyName +" </p>"
+                }
+                document.getElementById("MiDiv").innerHTML = miresultado;
+            })
+    }
+</script>
+

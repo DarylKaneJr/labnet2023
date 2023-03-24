@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BaseLogic.cs" />
     <Compile Include="CustomerLogic.cs" />
+    <Compile Include="CustomException.cs" />
     <Compile Include="DTO\CategoriesDTO.cs" />
     <Compile Include="DTO\CustomersDTO.cs" />
     <Compile Include="DTO\OrdersDTO.cs" />
