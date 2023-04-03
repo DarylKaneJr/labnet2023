@@ -1,0 +1,52 @@
+
+
+<h1>Lista de Shippers</h1>
+<br>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ShipperID</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+<tbody>
+        <tr *ngFor="let shippers of shipp" >
+            <td> {{shippers.ShippersID}} </td>
+            <td> {{shippers.CompanyName}}</td>
+            <td> {{shippers.Phone}}</td>
+            <td>
+                <button class="editar-btn" (click)="editarshipper(shippers)">Editar</button>
+                <button class="btn btn-sm btn-danger" (click)="onDeleteship(shippers) "  >Eliminar</button>
+              </td>
+        </tr>
+</tbody>
+</table>
+
+<h1>Insertar y Editar</h1>
+<form [formGroup]="miFormulario" (ngSubmit)="saveNew()" class="mi-formulario">
+    <div class="campo" >
+      <label for="companyname">COMPANY NAME:</label>
+      <input id="companyname" formControlName="companyname" class="input-text" [(ngModel)]="campo" required>
+
+    </div>
+    <div class="campo">
+      <label for="phone">PHONE:</label>
+      <input type="text" id="phone" formControlName="phone" class="input-text" [(ngModel)]="campo2" required>
+    </div>
+    <button type="submit" class="boton">INSERTAR</button>
+    <hr>
+  </form>
+
+  <form [formGroup]="miFormulario" (ngSubmit)="updateshipper()" class="mi-formulario" #formulario="ngForm">
+    <div class="campo">
+        <label for="shipperid">SHIPPERS ID: </label>
+        <input type="text" id="shipperid" formControlName="shipperid" class="input-text" required>
+        <hr>
+     </div>
+     <button [disabled]="miFormulario.invalid" type="submit" class="boton">Editar</button>
+     <div>
+      Valido: {{miFormulario.valid | json}}
+    </div>
+  </form>

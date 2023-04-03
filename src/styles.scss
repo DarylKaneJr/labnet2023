@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+h1{
+    color: #333; 
+    text-align: center; 
+    font-weight: bold; 
+    margin-top: 20px;
+}
+
+body {
+    background-color:rgb(0, 119, 255);
+     }
+
+  .mi-formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .boton {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .boton:hover {
+    background-color: #0069d9;
+  }
+  .editar-btn {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color de texto */
+    padding: 8px 9px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Como un elemento en línea */
+    font-size: 13px; /* Tamaño de letra */
+    margin: 4px 4px; /* Margen */
+    cursor: pointer; /* Cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+  }
