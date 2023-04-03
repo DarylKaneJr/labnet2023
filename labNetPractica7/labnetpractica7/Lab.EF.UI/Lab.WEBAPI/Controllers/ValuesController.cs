@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Web.Http.Cors;
 namespace Lab.WEBAPI.Controllers
 {
     public class ValuesController : ApiController
     {
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         // GET api/values
+        [HttpGet]
         public IHttpActionResult Get()
         {
             try
@@ -34,6 +36,7 @@ namespace Lab.WEBAPI.Controllers
         }
 
         // GET api/values/5
+        [HttpGet]
         public IHttpActionResult Get(int id)
         {
             try
@@ -61,6 +64,7 @@ namespace Lab.WEBAPI.Controllers
 
         // POST api/values
         //Ej : {    "CompanyName": "hola",  "Phone" : "1234"}// 
+        [HttpPost]
         public IHttpActionResult Post(Shippers shippersview)
         {
             try
@@ -81,13 +85,11 @@ namespace Lab.WEBAPI.Controllers
         }
 
         // PUT api/values/5
-
+        [HttpPut]
         public IHttpActionResult Put(Shippers shippersview)
         {
             try
-            {
-                if (shippersview != null)
-                {
+            {               
                     var logic = new ShippersLogic();
                     Shippers obj;
                     obj = new Shippers();
@@ -95,9 +97,7 @@ namespace Lab.WEBAPI.Controllers
                     obj.CompanyName = shippersview.CompanyName;
                     obj.Phone = shippersview.Phone;
                     logic.Update(obj);
-                    return Ok(obj);
-                }
-                return BadRequest("se requiere llenar objeto");
+                    return Ok(obj);            
             }
             catch (Exception)
             {
@@ -105,6 +105,7 @@ namespace Lab.WEBAPI.Controllers
             }
         }
 
+        [HttpDelete]
         // DELETE api/values/5
         public IHttpActionResult Delete(int id)
         {
